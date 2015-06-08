@@ -11,5 +11,11 @@
 |
 */
 
+// Web platform
+Route::get('/', 'VariousController@index');
+
+// API
+Route::post('/user/insert', 'ApiUsers@store');
 Route::get('/user/all', 'ApiUsers@index');
+Route::get('/user/{id}', 'ApiUSers@show');
 Route::delete('/user/{id}', 'ApiUsers@destroy');

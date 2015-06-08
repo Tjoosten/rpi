@@ -6,7 +6,11 @@ class InvalidTransformer {
     {
         return [
             "error"   => (string) "400",
-            "message" => (string) 'Invalid Content-Type header.'
+            "message" => (string) 'Invalid Content-Type header.',
+            "Supported" => (array) [
+                    "JSON" => (string) "application/json",
+                    "YAML" => (string) "text/taml",
+                ],
         ];
     }
 }

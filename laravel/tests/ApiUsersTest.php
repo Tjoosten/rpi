@@ -4,58 +4,70 @@ class ApiUsersTest extends TestCase {
 
     protected $baseUrl = 'http://localhost:8000';
 
-    /** @test */
-	public function testAllUsersJson()
-	{
-        $output = [
-            "firstname" => "Tim",
-            "lastname"  => "Joosten",
-            "email"     => "Topairy@gmail.com"
-        ];
-
+    public function testApiUsersAllJson()
+    {
         $this->withHeaders(['Content-Type' => 'application/json']);
         $this->get('/user/all');
-        $this->seeJson();
+        $this->isJson();
         $this->seeStatusCode(200);
-        $this->seeJsonContains($output);
-	}
+    }
 
-    /** @test */
-    public function testAllUsersYaml()
+    public function testApiUsersAllYaml()
     {
         $this->withHeaders(['Content-Type' => 'text/yaml']);
         $this->get('/user/all');
         $this->seeStatusCode(200);
     }
 
-    /** @test */
-    public function testAllUsersInvalid()
+    public function testApiUsersSpecificJSon()
     {
-        $output = [
-            "message" => "Invalid Content-Type header.",
-            "error"   => "400",
-        ];
-
-        $this->get('/user/all');
-        $this->seeStatusCode(400);
-        $this->seeJsonContains($output);
+        $this->withHeaders(['Content-Type' => 'application/json']);
+        $this->get('/user/1');
+        $this->isJson();
+        $this->seeStatusCode(200);
     }
 
-    public function testDeleteUsersJson()
+    public function testApiUsersSpecificYaml()
+    {
+        $this->withHeaders(['Content-Type' => 'text/yaml']);
+        $this->get('/user/1');
+        $this->seeStatusCode(200);
+    }
+
+    public function testApiUsersDeleteJson()
     {
         $this->withHeaders(['Content-Type' => 'application/json']);
         $this->delete('/user/1');
-        $this->seeJson();
-        $this->seeStatusCode(200);
+        $this->isJson();
+        $this->seeStatusCode(400);
     }
 
-    /** @test */
-    public function testDeleteUsersYaml()
+    public function testApiUsersDeleteYaml()
     {
-        $this->withHeaders(['Content-Type' => "text/yaml"]);
-        $this->delete('/user/2');
-        $this->seeStatusCode(200);
+        $this->withHeaders(['Content-Type' => 'text/yaml']);
+        $this->delete('/user/1');
+        $this->seeStatusCode(400);
     }
 
+    public function testApiUsersInvalidOutput()
+    {
+        $this->get('/user/all');
+        $this->seeStatusCode(400);
+        $this->isJson();
+    }
 
+    public function testApiUsersInsert()
+    {
+        $data = [
+            'firstname' => 'john',
+            'lastname'  => 'doe',
+            'email'     => 'jhondoe@example.com'
+        ];
+
+        $this->withHeaders(['Content-Type' => 'application/json']);
+        $this->post('/user/insert', $data);
+        $this->isJson();
+        $this->seeJsonContains(['message' => 'Foo']);
+        $this->seeStatusCode(200);
+    }
 }
