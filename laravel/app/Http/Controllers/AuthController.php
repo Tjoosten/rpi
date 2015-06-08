@@ -12,6 +12,19 @@ use Illuminate\Support\Facades\Lang;
 class AuthController extends Controller {
 
     /**
+     * get all the users in the system
+     *
+     * @return \Illuminate\View\View
+     */
+    public function getUsers()
+    {
+        $data['title'] = Lang::get('auth.titleUsers');
+        $data['query'] = user::paginate(15);
+
+        return view('admin.users', $data);
+    }
+
+    /**
      * Function for logging in the user.
      *
      * @link   POST /login

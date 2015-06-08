@@ -5,3 +5,7 @@ body {
 .register-form-width {
     width: 30%;
 }
+
+.padding-tab-content {
+    padding-top: 10px;
+}

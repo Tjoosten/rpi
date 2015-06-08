@@ -2,6 +2,12 @@
 
     return [
         'titleRegister' => 'Registreer',
+        'titleUsers'    => 'Gebruikers beheer',
+
+        'tabUsers' => 'Gebruikers.',
+
+        'tableUsersName'  => 'Naam',
+        'tableUsersEmail' => 'Email adres',
 
         'registerFirstname' => 'Voornaam',
         'registerLastname'  => 'Achternaam',
