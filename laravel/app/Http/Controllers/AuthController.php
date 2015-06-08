@@ -21,13 +21,13 @@ class AuthController extends Controller {
 
         if (Auth::attempt($requirements)) {
             $notification['class']   = 'alert-success',
-            $notification['heading'] = Lang::get(''),
+            $notification['heading'] = Lang::get('alerts.success'),
             $notification['message'] = Lang::get('auth.LoginSuccess'),
 
             return redirect::back()->with($notification):
         } else {
             $notification['class']   = 'alert alert-danger',
-            $notification['heading'] = Lang::get(''),
+            $notification['heading'] = Lang::get('alerts.danger'),
             $notification['message'] = Lang::get('auth.LoginError'),
 
             return redirect::back()->with($notification)->withInput();
