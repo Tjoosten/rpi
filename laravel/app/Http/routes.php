@@ -13,6 +13,7 @@
 
 // Web platform
 Route::get('/', 'VariousController@index');
+Route::post('/login', 'AuthController@verifyLogin');
 
 // API
 Route::post('/user/insert', 'ApiUsers@store');
