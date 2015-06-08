@@ -20,18 +20,24 @@ class AuthController extends Controller {
         $requirements = ['email' => Input::get('email'), 'password' => Input::get('password')];
 
         if (Auth::attempt($requirements)) {
-            $notification['class']   = 'alert-success',
-            $notification['heading'] = Lang::get('alerts.success'),
-            $notification['message'] = Lang::get('auth.LoginSuccess'),
+            $notification['class']   = 'alert-success';
+            $notification['heading'] = Lang::get('alerts.success');
+            $notification['message'] = Lang::get('auth.LoginSuccess');
 
-            return redirect::back()->with($notification):
+            return redirect::back()->with($notification);
         } else {
-            $notification['class']   = 'alert alert-danger',
-            $notification['heading'] = Lang::get('alerts.danger'),
-            $notification['message'] = Lang::get('auth.LoginError'),
+            $notification['class']   = 'alert alert-danger';
+            $notification['heading'] = Lang::get('alerts.danger');
+            $notification['message'] = Lang::get('auth.LoginError');
 
             return redirect::back()->with($notification)->withInput();
         }
+    }
+
+    public function ViewRegister()
+    {
+        $data['title'] = Lang::get('auth.titleRegister');
+        return view('client.register', $data);
     }
 
 }
