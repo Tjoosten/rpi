@@ -16,7 +16,7 @@
                     </div>
 
                     {{-- Registration form --}}
-                    <form method="POST" action="">
+                    <form method="POST" action="/register">
                         <label for="01"> @lang('auth.registerFirstname'): </label>
                         <input id="01" type="text" name="firstname" placeholder="@lang('auth.registerFirstname')" class="register-form-width form-control">
                         <br />

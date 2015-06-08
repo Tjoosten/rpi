@@ -14,6 +14,7 @@
 // Web platform
 Route::get('/', 'VariousController@index');
 Route::get('/register', 'AuthController@ViewRegister');
+Route::post('/register', 'AuthController@postRegister');
 Route::post('/login', 'AuthController@verifyLogin');
 
 // API
