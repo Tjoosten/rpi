@@ -1,9 +1,15 @@
 <?php
 
 use Illuminate\Support\Facades\Artisan;
-use Laracasts\Integrated\Extensions\Laravel as IntegrationTest;
 
-class TestCase extends IntegrationTest {
+class TestCase extends Illuminate\Foundation\Testing\TestCase {
+
+    /**
+     * The base URL to use while testing the application.
+     *
+     * @var string
+     */
+    protected $baseUrl = 'http://localhost';
 
     public function setUp()
     {
@@ -23,7 +29,7 @@ class TestCase extends IntegrationTest {
         putenv('DB_DEFAULT_CONNECTION=sqlite');
 
 		$app = require __DIR__.'/../bootstrap/app.php';
-		$app->make('Illuminate\Contracts\Console\Kernel')->bootstrap();
+        $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
 
 		return $app;
 	}

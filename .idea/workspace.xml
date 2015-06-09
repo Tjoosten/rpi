@@ -37,11 +37,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/laravel/bootstrap/cache/.gitignore">
+      <file leaf-file-name="ApiUsersTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/laravel/tests/ApiUsersTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3125" vertical-offset="0" max-vertical-offset="105">
-              <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.58208954" vertical-offset="0" max-vertical-offset="335">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -63,11 +63,9 @@
         <option value="$PROJECT_DIR$/laravel/database/migrations/2015_06_05_004954_usersTable.php" />
         <option value="$PROJECT_DIR$/laravel/database/seeds/UserTableSeeder.php" />
         <option value="$PROJECT_DIR$/laravel/composer.json" />
-        <option value="$PROJECT_DIR$/laravel/tests/TestCase.php" />
         <option value="$PROJECT_DIR$/laravel/app/Providers/EventServiceProvider.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Transformers/InvalidTransformer.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Requests/UserValidation.php" />
-        <option value="$PROJECT_DIR$/laravel/tests/ApiUsersTest.php" />
         <option value="$PROJECT_DIR$/laravel/app/User.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Transformers/UserTransformer.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ApiUsers.php" />
@@ -88,6 +86,8 @@
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/laravel/bootstrap/autoload.php" />
         <option value="$PROJECT_DIR$/laravel/bootstrap/cache/.gitignore" />
+        <option value="$PROJECT_DIR$/laravel/tests/TestCase.php" />
+        <option value="$PROJECT_DIR$/laravel/tests/ApiUsersTest.php" />
       </list>
     </option>
   </component>
@@ -97,8 +97,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="102" />
+    <option name="x" value="30" />
+    <option name="y" value="135" />
     <option name="width" value="1280" />
     <option name="height" value="636" />
   </component>
@@ -162,6 +162,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -708,11 +726,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="102" width="1280" height="636" extended-state="0" />
-    <editor active="false" />
+    <frame x="30" y="135" width="1280" height="636" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.6672794" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3382353" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -766,62 +784,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ApiUsers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1875" max-vertical-offset="2535">
-          <caret line="150" column="57" selection-start-line="150" selection-start-column="57" selection-end-line="150" selection-end-column="57" />
-          <folding>
-            <marker date="1433726948000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder=" Class constructor ..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder=" Display a listing of the resource. ..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder=" Store a newly created resource in storage. ..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder=" Display the specified resource. ..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder=" Update the specified resource in storage. ..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder=" Remove the specified resource from storage. ..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433726948000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/tests/ApiUsersTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="390">
           <caret line="6" column="47" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1065,25 +1032,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/tests/TestCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7407407" vertical-offset="0" max-vertical-offset="540">
-          <caret line="25" column="71" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Requests/UserValidation.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.67901236" vertical-offset="0" max-vertical-offset="555">
           <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/tests/ApiUsersTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21428572" vertical-offset="165" max-vertical-offset="1185">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1393,6 +1346,42 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3125" vertical-offset="0" max-vertical-offset="105">
           <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/bootstrap/cache/services.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.770751" vertical-offset="0" max-vertical-offset="2220">
+          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
+          <folding>
+            <marker date="1433884299000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433884299000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1433884299000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1433884299000" expanded="true" signature="-1:-1" placeholder="{&quot;command.app.name&quot;: &quot;Illuminate\\Foundation\\Providers\\ArtisanServiceProvider&quot;...}" />
+            <marker date="1433884299000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/tests/TestCase.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5970149" vertical-offset="25" max-vertical-offset="645">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding>
+            <marker date="1433886289000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1433886289000" expanded="true" signature="-1:-1" placeholder=" The base URL to use while testing the application. ..." />
+            <marker date="1433886289000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1433886289000" expanded="true" signature="-1:-1" placeholder=" Creates the application. ..." />
+            <marker date="1433886289000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/tests/ApiUsersTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.58208954" vertical-offset="0" max-vertical-offset="335">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding />
         </state>
       </provider>
