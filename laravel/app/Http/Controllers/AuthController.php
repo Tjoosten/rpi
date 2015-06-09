@@ -170,4 +170,14 @@ class AuthController extends Controller {
 
         return Redirect::back()->with($notifcation);
     }
+
+    public function doAdmin()
+    {
+
+    }
+
+    public function undoAdmin()
+    {
+
+    }
 }
