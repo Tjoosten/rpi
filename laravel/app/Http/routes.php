@@ -18,6 +18,7 @@ Route::get('/usermanagement', 'AuthController@getUsers');
 Route::post('/register', 'AuthController@postRegister');
 Route::get('/block/{id}', 'AuthController@doBlock');
 Route::get('/unblock/{id}', 'AuthController@doUnBlock');
+Route::get('/delete/{id}', 'AuthController@deleteUser');
 
 // API
 Route::post('/user/insert', 'ApiUsers@store');
