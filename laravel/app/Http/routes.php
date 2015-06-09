@@ -16,7 +16,8 @@ Route::get('/', 'VariousController@index');
 Route::get('/register', 'AuthController@ViewRegister');
 Route::get('/usermanagement', 'AuthController@getUsers');
 Route::post('/register', 'AuthController@postRegister');
-Route::post('/login', 'AuthController@verifyLogin');
+Route::get('/block/{id}', 'AuthController@doBlock');
+Route::get('/unblock/{id}', 'AuthController@doUnBlock');
 
 // API
 Route::post('/user/insert', 'ApiUsers@store');

@@ -12,8 +12,17 @@ use Illuminate\Support\Facades\Lang;
 class AuthController extends Controller {
 
     /**
+     * Class constructor
+     */
+    public function __construct()
+    {
+        $this->middleware('admin');
+    }
+
+    /**
      * get all the users in the system
      *
+     * @link   GET /usermanagement
      * @return \Illuminate\View\View
      */
     public function getUsers()
@@ -62,6 +71,9 @@ class AuthController extends Controller {
     }
 
     /**
+     * Insert the newly to the database.
+     *
+     * @link  POST /register
      * @param UserValidation $input
      */
     public function postRegister(UserValidation $input)
@@ -85,4 +97,50 @@ class AuthController extends Controller {
 
     }
 
+    /**
+     * Block a user.
+     *
+     * @link   GET /block/{id}
+     * @return mixed
+     */
+    public function doBlock()
+    {
+        $MySQL = new User;
+
+        if ($MySQL->save()) {
+            $notification['class']   = 'alert alert-success';
+            $notification['heading'] = Lang::get('alerts.success');
+            $notification['message'] = Lang::get('auth.blockSuccess');
+        } else {
+            $notifucation['class']   = 'alert alert-danger';
+            $notification['heading'] = Lang::get('alerts.danger');
+            $notification['message'] = Lang::get('auth.blockError');
+        }
+
+        return Redirect::back()->with($notification);
+    }
+
+    /**
+     * Unblock a user.
+     *
+     * @link   GET /unblock/{id}
+     * @return mixed
+     */
+    public function doUnBlock()
+    {
+        $MySQL         = new User;
+        $MySQL->active = "Y";
+
+        if ($MySQL->save()) {
+            $notification['class']   = 'alert alert-success';
+            $notification['heading'] = Lang::get('alerts.success');
+            $notification['message'] = Lang::get('auth.unBlockSuccess');
+        } else {
+            $notification['class']   = 'alert alert-danger';
+            $notification['heading'] = Lang::get('alerts.danger');
+            $notification['message'] = Lang::get('auth.unBlockError');
+        }
+
+        return Redirect::back()->with($notification);
+    }
 }
