@@ -9,6 +9,9 @@
         'tableUsersName'  => 'Naam',
         'tableUsersEmail' => 'Email adres',
 
+        'deleteSuccess' => 'De gebruiker is successvol verwijderd.',
+        'deleteError'   => 'Men kon de gebruiker niet verwijderen',
+
         'registerFirstname' => 'Voornaam',
         'registerLastname'  => 'Achternaam',
         'registerEmail'     => 'Email adres',

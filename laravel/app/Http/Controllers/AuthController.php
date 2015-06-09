@@ -101,11 +101,12 @@ class AuthController extends Controller {
      * Block a user.
      *
      * @link   GET /block/{id}
+     * @param $id
      * @return mixed
      */
-    public function doBlock()
+    public function doBlock($id)
     {
-        $MySQL = new User;
+        $MySQL = User::find($id);
 
         if ($MySQL->save()) {
             $notification['class']   = 'alert alert-success';
@@ -124,11 +125,12 @@ class AuthController extends Controller {
      * Unblock a user.
      *
      * @link   GET /unblock/{id}
+     * @param $id
      * @return mixed
      */
-    public function doUnBlock()
+    public function doUnBlock($id)
     {
-        $MySQL         = new User;
+        $MySQL         = User::find($id);
         $MySQL->active = "Y";
 
         if ($MySQL->save()) {
@@ -142,5 +144,29 @@ class AuthController extends Controller {
         }
 
         return Redirect::back()->with($notification);
+    }
+
+    /**
+     * Delete a user out of the system
+     *
+     * @link   GET /delete/{id}
+     * @param $id
+     * @return mixed
+     */
+    public function deleteUser($id)
+    {
+        $count = User::destroy($id);
+
+        if ($count > 0) {
+            $notification['class']   = 'alert alert-success';
+            $notification['heading'] = Lang::get('alerts.success');
+            $notification['message'] = Lang::get('auth.deleteSuccess');
+        } else {
+            $notification['class']   = 'alert alert-danger';
+            $notification['heading'] = Lang::get('alerts.danger');
+            $notification['message'] = Lang::get('auth.deleteError');
+        }
+
+        return Redirect::back()->with($notifcation);
     }
 }
