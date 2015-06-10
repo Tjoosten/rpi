@@ -22,6 +22,8 @@
 
                         {{-- Tab panes --}}
                         <div class="tab-content">
+
+                            {{-- Start users tab --}}
                             <div role="tabpanel" class="tab-pane active" id="users">
                                 <div class="padding-tab-content"></div>
 
@@ -48,7 +50,12 @@
                                                         {{-- Start toolbelt --}}
                                                         <td>
                                                             <div class="btn-group">
-                                                                <a href="" class="btn btn-xs btn-danger">Block</a>
+                                                                @if(Auth::user()->role == 'Y')
+                                                                    <a href="" class="btn btn-xs btn-danger">Block</a>
+                                                                @elseif(Auth::user()->role == 'N')
+                                                                    <a href="" class="btn btn-xs btn-danger">Unblock</a>
+                                                                @endif
+
                                                                 <a href="" class="btn btn-xs btn-danger">Admin</a>
                                                                 <a href="" class="btn btn-xs btn-danger">Verwijder</a>
                                                             </div>
@@ -64,6 +71,8 @@
                                 {{-- Pagination --}}
                                 {!! $query->render() !!}
                             </div>
+                            {{-- End users tab --}}
+
                         </div>
 
                     </div>

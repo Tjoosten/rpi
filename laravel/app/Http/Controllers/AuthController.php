@@ -19,8 +19,9 @@ class AuthController extends Controller {
      */
     public function __construct()
     {
-       $this->middleware('admin', ['only' => $this->adminMiddleware]);
-       $this->middleware('csrf', ['only' => $this->csrfMiddleware]);
+        $this->middleware('loggedIn');
+        $this->middleware('admin', ['only' => $this->adminMiddleware]);
+        $this->middleware('csrf', ['only' => $this->csrfMiddleware]);
     }
 
     /**
@@ -110,7 +111,8 @@ class AuthController extends Controller {
      */
     public function doBlock($id)
     {
-        $MySQL = User::find($id);
+        $MySQL         = User::find($id);
+        $MySQL->active = "N";
 
         if ($MySQL->save()) {
             $notification['class']   = 'alert alert-success';
@@ -177,7 +179,7 @@ class AuthController extends Controller {
     public function doAdmin($id)
     {
         $MySQL       = User::find($id);
-        $MySQL->role = "Y";
+        $MySQL->role = "A";
 
         if ($MySQL->save()) {
             $notification['class']   = 'alert alert-success';
