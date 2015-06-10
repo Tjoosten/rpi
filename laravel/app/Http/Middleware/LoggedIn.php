@@ -20,7 +20,7 @@ class LoggedIn
         if (Auth::check()) {
             return $next($request);
         } else {
-            return redirect::to('/')
+            return redirect::to('/');
         }
     }
 }
