@@ -14,7 +14,7 @@
 // Web platform
 Route::get('/', 'VariousController@index');
 Route::get('/register', 'AuthController@ViewRegister');
-Route::get('/usermanagement', 'AuthController@getUsers');
+Route::get('/management', 'AuthController@getUsers');
 Route::post('/register', 'AuthController@postRegister');
 Route::get('/block/{id}', 'AuthController@doBlock');
 Route::get('/unblock/{id}', 'AuthController@doUnBlock');
