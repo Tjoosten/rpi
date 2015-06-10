@@ -11,7 +11,8 @@ use Illuminate\Support\Facades\Lang;
 
 class AuthController extends Controller {
 
-    private $adminMiddleware = ['deleteUser'];
+    private $adminMiddleware  = ['deleteUser'];
+    private $csrfMiddleware   = ['postRegister'];
 
     /**
      * Class constructor
@@ -19,7 +20,7 @@ class AuthController extends Controller {
     public function __construct()
     {
        $this->middleware('admin', ['only' => $this->adminMiddleware]);
-       // $this->middleware('csrf');
+       $this->middleware('csrf', ['only' => $this->csrfMiddleware]);
     }
 
     /**
