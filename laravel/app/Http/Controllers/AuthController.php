@@ -171,13 +171,39 @@ class AuthController extends Controller {
         return Redirect::back()->with($notifcation);
     }
 
-    public function doAdmin()
+    public function doAdmin($id)
     {
+        $MySQL       = User::find($id);
+        $MySQL->role = "Y";
 
+        if ($MySQL->save()) {
+            $notification['class']   = 'alert alert-success';
+            $notification['heading'] = Lang::get('alerts.success');
+            $notification['message'] = Lang::get('auth.adminSuccess');
+        } else {
+            $notification['class']   = 'alert alert-danger',
+            $notification['heading'] = Lang::get('alerts.danger');
+            $notification['message'] = Lang::get('auth.adminError');
+        }
+
+        return redirect::back()->with($notification);
     }
 
-    public function undoAdmin()
+    public function undoAdmin($id)
     {
+        $MySQL       = User::find($id);
+        $MySQL->role = "U";
 
+        if ($MySQL->save()) {
+            $notification['class']   = 'alert alert-success';
+            $notification['heading'] = Lang::get('alerts.success');
+            $notification['message'] = Lang::get('auth.undoAdminSuccess');
+        } else {
+            $notification['class'] = 'alert alert-danger';
+            $notification['heading'] = Lang::get('alerts.danger');
+            $notification['message'] = Lang::get('auth.undoAdminError');
+        }
+
+        return Redirect::back()->with($notification);
     }
 }
