@@ -6,6 +6,7 @@ use App\Http\Requests\UserValidation;
 
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Lang;
 
@@ -19,7 +20,7 @@ class AuthController extends Controller {
      */
     public function __construct()
     {
-        $this->middleware('loggedIn');
+        //$this->middleware('loggedIn');
         $this->middleware('admin', ['only' => $this->adminMiddleware]);
         $this->middleware('csrf', ['only' => $this->csrfMiddleware]);
     }
@@ -83,10 +84,16 @@ class AuthController extends Controller {
      */
     public function postRegister(UserValidation $input)
     {
+        // Input variable are in a data variable
+        // So we can use them into the email template if needed.
+        $Data['firstname'] = $input->firstname;
+        $Data['lastname']  = $input->lastname;
+        $Data['email']     = $input->email;
+
         $MySQL            = new User;
-        $MySQL->firstname = $input->firstname;
-        $MySQL->lastname  = $input->lastname;
-        $MySQL->email     = $input->email;
+        $MySQL->firstname = $Data['firstname'];
+        $MySQL->lastname  = $Data['lastname'];
+        $MySQL->email     = $Data['email'];
 
         if ($MySQL->save()) {
             $notification['class']   = 'alert alert-success';
@@ -94,6 +101,10 @@ class AuthController extends Controller {
             $notification['message'] = Lang::get('auth.registerSuccess');
 
             // Email Template
+            Mail::send('emails.register', $Data, function($message) use($Data) {
+                $message->from('Topairy@gmail.com', 'Webred')->subject('register');
+                $message->to($Data['email']);
+            });
         } else {
             $notification['class']   = 'alert alert-danger';
             $notification['heading'] = Lang::get('alerts.danger');
