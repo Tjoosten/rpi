@@ -16,7 +16,7 @@ class AuthController extends Controller {
      */
     public function __construct()
     {
-       // $this->middleware('admin');
+       $this->middleware('admin', ['only' => ['deleteUser']]);
        // $this->middleware('csrf');
     }
 
