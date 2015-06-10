@@ -44,6 +44,16 @@
                                                             {!! $output->firstname !!} {!! $output->lastname !!}
                                                         </td>
                                                         <td> {!! $output->email !!} </td>
+
+                                                        {{-- Start toolbelt --}}
+                                                        <td>
+                                                            <div class="btn-group">
+                                                                <a href="" class="btn btn-xs btn-danger">Block</a>
+                                                                <a href="" class="btn btn-xs btn-danger">Admin</a>
+                                                                <a href="" class="btn btn-xs btn-danger">Verwijder</a>
+                                                            </div>
+                                                        </td>
+                                                        {{-- End toolbelt --}}
                                                     </tr>
                                                 @endforeach
                                             </tbody>
