@@ -92,6 +92,8 @@ class AuthController extends Controller {
             $notification['class']   = 'alert alert-success';
             $notification['heading'] = Lang::get('alerts.success');
             $notification['message'] = Lang::get('auth.registerSuccess');
+
+            // Email Template
         } else {
             $notification['class']   = 'alert alert-danger';
             $notification['heading'] = Lang::get('alerts.danger');
