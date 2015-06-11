@@ -12,7 +12,11 @@ class Cache extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('cache', function(Blueprint $t) {
+            $t->string('key')->unique();
+            $t->text('value');
+            $t->integer('expiration');
+        })
     }
 
     /**
@@ -22,6 +26,6 @@ class Cache extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('cache');
     }
 }
