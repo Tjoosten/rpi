@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Cache extends Migration
+class PasswordReminders extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,11 @@ class Cache extends Migration
      */
     public function up()
     {
-        Schema::create('cache', function(Blueprint $t) {
-            $t->string('key')->unique();
-            $t->text('value');
-            $t->integer('expiration');
+        Schema::create('password_reminders', function(Blueprint $t)
+        {
+            $t->string('email');
+            $t->string('token');
+            $t->timestamp('created_at');
         });
     }
 
@@ -26,6 +27,6 @@ class Cache extends Migration
      */
     public function down()
     {
-        Schema::drop('cache');
+        Schema::drop('password_reminders');
     }
 }

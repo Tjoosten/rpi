@@ -9,6 +9,8 @@
         'tableUsersName'    => 'Naam',
         'tableUsersEmail'   => 'Email adres',
 
+        'recoverPassword'   => 'Wachtwoord vergeten?',
+
         'deleteSuccess'     => 'De gebruiker is successvol verwijderd.',
         'deleteError'       => 'Men kon de gebruiker niet verwijderen',
 
@@ -29,6 +31,10 @@
         'unBlockSuccess'    => 'Het systeem heeft de gebruikerterug geactiveerd',
         'unBlockError'      => 'het systeem kon de gebruiker niet terug activeren',
 
+        'resetEmail'        => 'Wachtwoord wijziging',
+        'resetPass'         => 'Wachtwoord',
+
+        'buttonSend'        => 'Versturen',
         'buttonRegister'    => 'Registreer',
         'buttonReset'       => 'Reset formulier',
 

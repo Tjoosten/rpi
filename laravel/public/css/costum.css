@@ -9,3 +9,7 @@ body {
 .padding-tab-content {
     padding-top: 10px;
 }
+
+.form-with-recover {
+    width: 20%;
+}

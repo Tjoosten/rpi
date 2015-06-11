@@ -24,6 +24,7 @@
                         <input type="password" placeholder="Wachtwoord" class="form-control">
                     </div>
                     <button type="submit" class="btn btn-success">Login</button>
+                    <a class="btn btn-danger" href="">Reset Password</a>
                 </form>
             @else
                 <ul class="nav navbar-nav navbar-right">
