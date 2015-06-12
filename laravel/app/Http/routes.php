@@ -15,6 +15,7 @@
 Route::get('/', 'VariousController@index');
 Route::get('/register', 'AuthController@ViewRegister');
 Route::get('/management', 'AuthController@getUsers');
+Route::get('/logout', 'AuthController@Logout');
 Route::post('/register', 'AuthController@postRegister');
 Route::get('/block/{id}', 'AuthController@doBlock');
 Route::get('/unblock/{id}', 'AuthController@doUnBlock');

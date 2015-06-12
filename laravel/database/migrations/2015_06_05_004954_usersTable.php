@@ -18,6 +18,7 @@ class UsersTable extends Migration {
             $table->string('firstname', 255)->nullable();
             $table->string('lastname', 255)->nullable();
             $table->string('email', 255)->nullable();
+            $table->string('password')->nullable();
             $table->string('active', 4)->nullable();
             $table->string('role', 4)->nullable();
             $table->string('remember_token')->nullable();

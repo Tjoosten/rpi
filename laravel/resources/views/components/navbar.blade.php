@@ -29,7 +29,13 @@
             @else
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href=""">{!! Auth::user()->firstname !!} {!! Auth::user()->lastname !!} </a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            {!! Auth::user()->firstname !!} {!! Auth::user()->lastname !!}
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li> <a href="/logout"> @lang('auth.logout') </a> </li>
+                        </ul>
                     </li>
                 </ul>
             @endif

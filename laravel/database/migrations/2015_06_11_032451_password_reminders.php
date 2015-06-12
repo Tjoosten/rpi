@@ -12,7 +12,7 @@ class PasswordReminders extends Migration
      */
     public function up()
     {
-        Schema::create('password_reminders', function(Blueprint $t)
+        Schema::create('password_resets', function(Blueprint $t)
         {
             $t->string('email');
             $t->string('token');
@@ -27,6 +27,6 @@ class PasswordReminders extends Migration
      */
     public function down()
     {
-        Schema::drop('password_reminders');
+        Schema::drop('password_resets');
     }
 }
