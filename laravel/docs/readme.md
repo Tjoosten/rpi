@@ -5,3 +5,5 @@ Information portal.
 
 - [API](#)
   - [API users](api-users.md)
+  - [API words](api-words.md)
+  - [API kloekecode](api-kloekecode.md)
