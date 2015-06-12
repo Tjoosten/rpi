@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b3fd35c6-0155-43ac-83e3-2f0654fd897d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/docs/readme.md" afterPath="$PROJECT_DIR$/laravel/docs/readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/ApiKloekecode.php" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/ApiKloekecode.php" />
     </list>
     <ignored path="rpi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,14 +39,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/laravel/docs/readme.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
+      <file leaf-file-name="KloekecodeTransformer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/laravel/app/Http/Transformers/KloekecodeTransformer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16746412" vertical-offset="0" max-vertical-offset="627">
-              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.047468353" vertical-offset="0" max-vertical-offset="632">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -60,7 +57,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/laravel/app/Http/Transformers/UserTransformer.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ApiUsers.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/components/header;blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/client/frontpage.blade.php" />
@@ -108,9 +104,10 @@
         <option value="$PROJECT_DIR$/laravel/app/User.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/VariousController.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ApiKloekecode.php" />
         <option value="$PROJECT_DIR$/laravel/docs/api-users.md" />
         <option value="$PROJECT_DIR$/laravel/docs/readme.md" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ApiKloekecode.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Transformers/KloekecodeTransformer.php" />
       </list>
     </option>
   </component>
@@ -184,7 +181,81 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="docs" />
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Transformers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rpi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="laravel" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -348,20 +419,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel/bootstrap/cache/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3125" vertical-offset="0" max-vertical-offset="105">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/tests/TestCase.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5970149" vertical-offset="25" max-vertical-offset="645">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/tests/ApiUsersTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31343284" vertical-offset="0" max-vertical-offset="335">
@@ -671,14 +728,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ApiKloekecode.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10550459" vertical-offset="1476" max-vertical-offset="2130">
-          <caret line="109" column="80" selection-start-line="109" selection-start-column="80" selection-end-line="109" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/docs/api-users.md">
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
@@ -717,8 +766,76 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16746412" vertical-offset="0" max-vertical-offset="627">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.19138756" vertical-offset="0" max-vertical-offset="627">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Transformers/UserTransformer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="975">
+          <caret line="0" column="36" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="38" />
+          <folding>
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434120121000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/ApiKloekecode.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5221519" vertical-offset="585" max-vertical-offset="2130">
+          <caret line="68" column="23" selection-start-line="68" selection-start-column="23" selection-end-line="68" selection-end-column="23" />
+          <folding>
+            <marker date="1434126261000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder=" Class constructor ..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder=" Display a listing of the resource. ..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder=" Show the form for creating a new resource. ..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder=" Store a newly created resource in storage. ..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder=" Display the specified resource. ..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder=" Update the specified resource in storage. ..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder=" Remove the specified resource from storage. ..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434126261000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Transformers/KloekecodeTransformer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.047468353" vertical-offset="0" max-vertical-offset="632">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
           <folding />
         </state>
       </provider>
