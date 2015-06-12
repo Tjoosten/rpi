@@ -71,7 +71,7 @@ class ApiKloekecode extends Controller
         $Kloekecode = new Kloekecode;
 
         if ($Kloekecode->save()) {
-            $response['content'] = $this->kloekecode->KloekecodeTransforemer();
+            $response['content'] = $this->kloekecode->KloekecodeTransformer();
             $response['port']    = 200; // HTTP: OK.
         } else {
             $response['content'] = $this->kloekecode->EmptyTransformer();
@@ -103,8 +103,8 @@ class ApiKloekecode extends Controller
     {
         $Kloekecode = Kloekecode::find($id);
         $Kloekecode->Kloekecode = $input->kloekecode;
-        $Kloekecode->plaats     = $input->plaats;
-        $Kloekecode->gemeente   = $input->gemeente;
+        $Kloekecode->Plaats     = $input->plaats;
+        $Kloekecode->Gemeente   = $input->gemeente;
         $Kloekecode->Provincie  = $input->provincie;
 
         if ($Kloekecode->save()) {
