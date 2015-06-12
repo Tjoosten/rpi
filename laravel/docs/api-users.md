@@ -1,4 +1,4 @@
-[API] Users: 
+[API] Users:
 ==========================
 
 ## Endpoints
@@ -13,8 +13,9 @@ The user part of the APi has the following endpoints.
 
 ## Headers
 
-The API support the following HTTP Header: 
+The API support the following HTTP Header:
 
 | Format: | MIME Type:         |
 | ------- | ------------------ |
 | `JSON`  | `application/json` |
+| `YAML`  | `text/yaml`        |
