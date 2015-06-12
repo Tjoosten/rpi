@@ -15,4 +15,9 @@ class KloekecodeTransformer {
         };
     }
 
+    public function EmptyTransformer()
+    {
+        return [['message' => 'could no kloekecode found']];
+    }
+
 }

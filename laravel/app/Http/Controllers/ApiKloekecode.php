@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Kloekecode;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Transformers\KloekecodeTransformer;
@@ -9,6 +10,7 @@ use App\Http\Transformers\KloekecodeTransformer;
 use Illuminate\Support\Facades\Input;
 
 use League\Fractal\Manager;
+use League\Fractal\Resource\Collection;
 use League\Fractal\Pagination\Cursor;
 
 class ApiKloekecode extends Controller
@@ -19,7 +21,7 @@ class ApiKloekecode extends Controller
     /**
      * Class constructor
      */
-    public function __constrct()
+    public function __construct()
     {
         $this->fractal    = new Manager();
         $this->kloekecode = new KloekecodeTransformer();
@@ -45,20 +47,12 @@ class ApiKloekecode extends Controller
         $newCursor     = $kloekecode->last()->id;
         $cursor        = new Cursor($currentCursorStr, $prevCursorStr, $newCursor, $kloekecode->count());
 
-        $resource = new Collection($kloekecode, $this->kloekecode->Transformer());
+        $resource = new Collection($kloekecode, $this->kloekecode->KloekecodeTransformer());
         $resource->setCursor($cursor);
 
         $output = $this->fractal->createData($resource)->toJson();
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return Response
-     */
-    public function create()
-    {
-        //
+        return response($output, 200)->header('Content-Type', 'application/json');
     }
 
     /**
@@ -138,6 +132,6 @@ class ApiKloekecode extends Controller
         }
 
         return response($response['body'], $response['http_code'])
-                ->header('Content-Type', 'application/json')
+                ->header('Content-Type', 'application/json');
     }
 }

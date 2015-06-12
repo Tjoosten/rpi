@@ -30,6 +30,8 @@ Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 // API
+Route::get('/kloekecode/all', 'ApiKloekecode@index');
+
 Route::post('/user/insert', 'ApiUsers@store');
 Route::get('/user/all', 'ApiUsers@index');
 Route::get('/user/{id}', 'ApiUSers@show');
