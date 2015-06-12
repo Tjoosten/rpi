@@ -5,7 +5,7 @@
 
 The user part of the APi has the following endpoints.
 
-| Enpoint       | `GET` | `POST`| `PATCH`| `DELETE` |
+| Endpoint:       | `GET` | `POST`| `PATCH`| `DELETE` |
 | ------------- | ----- | ----- | ------ | -------- |
 | `/user/all`   | YES   | -     | -      | -        |
 | `/user/insert`| -     | YES   | -      | -        |
@@ -15,5 +15,6 @@ The user part of the APi has the following endpoints.
 
 The API support the following HTTP Header: 
 
-| ------ | ------------------ |
-| `JSON` | `application/json` |
+| Format: | MIME Type:         |
+| ------- | ------------------ |
+| `JSON`  | `application/json` |
