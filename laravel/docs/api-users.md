@@ -19,3 +19,11 @@ The API support the following HTTP Header:
 | ------- | ------------------ |
 | `JSON`  | `application/json` |
 | `YAML`  | `text/yaml`        |
+
+## Endpoints
+
+###*/user/all*
+
+**Method:** `GET`
+**Header(s):** `application/json`, `text/yaml`
+**Rights:** Administrator
