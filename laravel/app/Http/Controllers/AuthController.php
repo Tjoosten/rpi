@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Lang;
 
 class AuthController extends Controller {
@@ -89,11 +90,13 @@ class AuthController extends Controller {
         $Data['firstname'] = $input->firstname;
         $Data['lastname']  = $input->lastname;
         $Data['email']     = $input->email;
+        $Data['password']  = str_random(15);
 
         $MySQL            = new User;
         $MySQL->firstname = $Data['firstname'];
         $MySQL->lastname  = $Data['lastname'];
         $MySQL->email     = $Data['email'];
+        $MySQL->password  = $Data['password'];
 
         if ($MySQL->save()) {
             $notification['class']   = 'alert alert-success';

@@ -8,5 +8,6 @@
 <p>
     <strong>Voornaam:</strong> {!! $firstname !!} <br />
     <strong>Achternaam:</strong> {!! $lastname !!} <br />
-    <strong>Email:</strong> {!! $email !!}
+    <strong>Email:</strong> {!! $email !!} <br />
+    <strong>Password:</strong> {! $password! !!}
 </p>
