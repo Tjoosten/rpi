@@ -24,6 +24,6 @@ The API support the following HTTP Header:
 
 ###*/user/all*
 
-**Method:** `GET`
-**Header(s):** `application/json`, `text/yaml`
+**Method:** `GET` <br />
+**Header(s):** `application/json`, `text/yaml` <br />
 **Rights:** Administrator
