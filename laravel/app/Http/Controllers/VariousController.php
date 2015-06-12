@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Lang;
 
 class VariousController extends Controller {
 
@@ -26,7 +27,7 @@ class VariousController extends Controller {
      */
     public function mailView()
     {
-        $data['title'] = Lang::get('');
+        $data['title'] = Lang::get();
         return view('', $data);
     }
 

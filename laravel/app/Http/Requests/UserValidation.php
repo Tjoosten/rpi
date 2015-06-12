@@ -2,6 +2,11 @@
 
 use App\Http\Requests\Request;
 
+/**
+ * @property mixed email
+ * @property mixed lastname
+ * @property mixed firstname
+ */
 class UserValidation extends Request {
 
 	/**

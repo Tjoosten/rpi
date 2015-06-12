@@ -2,7 +2,10 @@
   <dictionary name="tim">
     <words>
       <w>firstname</w>
+      <w>gmail</w>
       <w>lastname</w>
+      <w>topairy</w>
+      <w>webred</w>
       <w>yaml</w>
     </words>
   </dictionary>
