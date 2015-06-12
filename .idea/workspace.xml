@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b3fd35c6-0155-43ac-83e3-2f0654fd897d" name="Default" comment="" />
+    <list default="true" id="b3fd35c6-0155-43ac-83e3-2f0654fd897d" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/laravel/resources/views/welcome.blade.php" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/AuthController.php" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/AuthController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/PasswordController.php" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/PasswordController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/VariousController.php" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/VariousController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/config/app.php" afterPath="$PROJECT_DIR$/laravel/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/composer.json" afterPath="$PROJECT_DIR$/laravel/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/laravel/composer.lock" afterPath="$PROJECT_DIR$/laravel/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="rpi.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -37,17 +47,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="register.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/laravel/resources/views/emails/register.blade.php">
+      <file leaf-file-name="PasswordController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/PasswordController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23809524" vertical-offset="0" max-vertical-offset="630">
-              <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.47468355" vertical-offset="0" max-vertical-offset="632">
+              <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -59,7 +72,6 @@
         <option value="$PROJECT_DIR$/laravel/app/Http/Requests/UserValidation.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Transformers/UserTransformer.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/ApiUsers.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/VariousController.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/components/header;blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/client/frontpage.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/lang/nl/alerts.php" />
@@ -78,8 +90,6 @@
         <option value="$PROJECT_DIR$/laravel/resources/views/client/register.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/RemindersController.php.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2015_06_10_025112_cache.php" />
-        <option value="$PROJECT_DIR$/laravel/composer.json" />
-        <option value="$PROJECT_DIR$/laravel/config/app.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/password/remind.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/password/reset.blade.php" />
         <option value="$PROJECT_DIR$/laravel/app/User.php" />
@@ -95,14 +105,17 @@
         <option value="$PROJECT_DIR$/laravel/resources/lang/nl/validation.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2015_06_11_032451_password_reminders.php" />
         <option value="$PROJECT_DIR$/laravel/database/migrations/2015_06_05_004954_usersTable.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/PasswordController.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/Middleware/RedirectIfAuthenticated.php" />
         <option value="$PROJECT_DIR$/laravel/resources/lang/nl/auth.php" />
         <option value="$PROJECT_DIR$/laravel/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/Auth/password.blade.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/components/navbar.blade.php" />
-        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/AuthController.php" />
         <option value="$PROJECT_DIR$/laravel/resources/views/emails/register.blade.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/AuthController.php" />
+        <option value="$PROJECT_DIR$/laravel/config/app.php" />
+        <option value="$PROJECT_DIR$/laravel/composer.json" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/VariousController.php" />
+        <option value="$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/PasswordController.php" />
       </list>
     </option>
   </component>
@@ -112,12 +125,11 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="24" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="747" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -623,29 +635,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="24" width="1280" height="747" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="747" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6091603" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.608828" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905295" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27625203" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28432956" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.9356618" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.93435115" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977098" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -681,27 +693,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/laravel/app/Providers/RouteServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30952382" vertical-offset="15" max-vertical-offset="735">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Events/Event.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11904762" vertical-offset="0" max-vertical-offset="630">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Providers/EventServiceProvider.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5" vertical-offset="0" max-vertical-offset="630">
-          <caret line="22" column="19" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/Http/Transformers/InvalidTransformer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.35714287" vertical-offset="0" max-vertical-offset="630">
@@ -734,13 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3809524" vertical-offset="240" max-vertical-offset="975">
           <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/VariousController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72698414" vertical-offset="7" max-vertical-offset="690">
-          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -870,32 +854,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77832514" vertical-offset="22" max-vertical-offset="810">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7044335" vertical-offset="2572" max-vertical-offset="3105">
-          <caret line="181" column="30" selection-start-line="181" selection-start-column="30" selection-end-line="181" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laravel/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2764977" vertical-offset="0" max-vertical-offset="600">
           <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43933055" vertical-offset="0" max-vertical-offset="239">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -938,14 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7380952" vertical-offset="465" max-vertical-offset="1095">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1427231216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427231216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427231216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427231216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427231216000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1427231216000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -953,10 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4047619" vertical-offset="0" max-vertical-offset="630">
           <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-          <folding>
-            <marker date="1434067154000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434067154000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -964,18 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6666667" vertical-offset="0" max-vertical-offset="1560">
           <caret line="28" column="45" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="34" />
-          <folding>
-            <marker date="1434067186000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434067186000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434067186000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434067186000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434067186000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434067186000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434067186000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434067186000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434067186000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434067186000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -983,52 +922,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5714286" vertical-offset="0" max-vertical-offset="630">
           <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <marker date="1434067369000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1434067369000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434067369000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
-            <marker date="1434067369000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434067369000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434067369000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434067369000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
-            <marker date="1434067369000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2015_06_05_004954_usersTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65555555" vertical-offset="22" max-vertical-offset="705">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-          <folding>
-            <marker date="1434067401000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1434067401000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434067401000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
-            <marker date="1434067401000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434067401000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434067401000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434067401000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
-            <marker date="1434067401000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434067401000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434067401000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2015_06_10_025112_cache.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6666667" vertical-offset="0" max-vertical-offset="630">
-          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <marker date="1433993231000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1433993231000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433993231000" expanded="true" signature="-1:-1" placeholder=" Run the migrations. ..." />
-            <marker date="1433993231000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1433993231000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433993231000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433993231000" expanded="true" signature="-1:-1" placeholder=" Reverse the migrations. ..." />
-            <marker date="1433993231000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1036,32 +929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.65640193" vertical-offset="0" max-vertical-offset="735">
           <caret line="27" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
-          <folding>
-            <marker date="1434066880000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434066880000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434066880000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434066880000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434066880000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434066880000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434066880000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434066880000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434066880000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1434066880000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/PasswordController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52380955" vertical-offset="0" max-vertical-offset="630">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding>
-            <marker date="1434069462000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1434069462000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434069462000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434069462000" expanded="true" signature="-1:-1" placeholder=" Create a new password controller instance. ..." />
-            <marker date="1434069462000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1069,16 +936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.71428573" vertical-offset="30" max-vertical-offset="720">
           <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
-          <folding>
-            <marker date="1434069628000" expanded="false" signature="-1:-1" placeholder="..." />
-            <marker date="1434069628000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434069628000" expanded="true" signature="-1:-1" placeholder=" The Guard implementation. ..." />
-            <marker date="1434069628000" expanded="true" signature="-1:-1" placeholder=" Create a new filter instance. ..." />
-            <marker date="1434069628000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434069628000" expanded="true" signature="-1:-1" placeholder=" Handle an incoming request. ..." />
-            <marker date="1434069628000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434069628000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1086,9 +943,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.85714287" vertical-offset="90" max-vertical-offset="750">
           <caret line="42" column="37" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-          <folding>
-            <marker date="1434069710000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1096,9 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45238096" vertical-offset="0" max-vertical-offset="630">
           <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
-          <folding>
-            <marker date="1434069881000" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1106,17 +957,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5105348" vertical-offset="0" max-vertical-offset="645">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <marker date="1434070284000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434070284000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434070284000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434070284000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434070284000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434070284000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434070284000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434070284000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434070284000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1124,74 +964,135 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46515396" vertical-offset="58" max-vertical-offset="735">
           <caret line="23" column="35" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
-          <folding>
-            <marker date="1434071743000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071743000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071743000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071743000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071743000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071743000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071743000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071743000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071743000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071743000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071743000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071743000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071743000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AuthController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8095238" vertical-offset="1095" max-vertical-offset="3630">
-          <caret line="107" column="34" selection-start-line="107" selection-start-column="34" selection-end-line="107" selection-end-column="34" />
-          <folding>
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder=" Class constructor ..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder=" get all the users in the system ..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder=" Function for logging in the user. ..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder=" Register view ..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder=" Insert the newly to the database. ..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder=" Block a user. ..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder=" Unblock a user. ..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder=" Delete a user out of the system ..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="{...}" />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434071863000" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/laravel/resources/views/emails/register.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23809524" vertical-offset="0" max-vertical-offset="630">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.2857143" vertical-offset="0" max-vertical-offset="630">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2015_06_05_004954_usersTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="705">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/config/compile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35714287" vertical-offset="0" max-vertical-offset="705">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/config/cache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54761904" vertical-offset="645" max-vertical-offset="1275">
+          <caret line="66" column="79" selection-start-line="66" selection-start-column="79" selection-end-line="66" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/database/migrations/2015_06_10_025112_cache.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42857143" vertical-offset="0" max-vertical-offset="630">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6666667" vertical-offset="510" max-vertical-offset="3735">
+          <caret line="71" column="36" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/_ide_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77795786" vertical-offset="2595" max-vertical-offset="186675">
+          <caret line="211" column="33" selection-start-line="211" selection-start-column="33" selection-end-line="211" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48734176" vertical-offset="187" max-vertical-offset="840">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+          <folding>
+            <marker date="1434078586000" expanded="true" signature="-1:-1" placeholder="{&quot;name&quot;: &quot;laravel/laravel&quot;...}" />
+            <marker date="1434078586000" expanded="true" signature="-1:-1" placeholder="{&quot;laravel/framework&quot;: &quot;*&quot;...}" />
+            <marker date="1434078586000" expanded="true" signature="-1:-1" placeholder="{&quot;phpunit/phpunit&quot;: &quot;~4.0&quot;...}" />
+            <marker date="1434078586000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434078586000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1434078586000" expanded="true" signature="-1:-1" placeholder="{&quot;App\\&quot;: &quot;app/&quot;...}" />
+            <marker date="1434078586000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434078586000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1434078586000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434078586000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1434078586000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1434078586000" expanded="true" signature="-1:-1" placeholder="[...]" />
+            <marker date="1434078586000" expanded="true" signature="-1:-1" placeholder="{&quot;preferred-install&quot;: &quot;dist&quot;...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45094937" vertical-offset="1665" max-vertical-offset="3120">
+          <caret line="130" column="40" selection-start-line="130" selection-start-column="40" selection-end-line="130" selection-end-column="40" />
+          <folding>
+            <marker date="1434078487000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434078487000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434078487000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434078487000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434078487000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434078487000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434078487000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434078487000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434078487000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434078487000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434078487000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434078487000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434078487000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434078487000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/VariousController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47468355" vertical-offset="15" max-vertical-offset="690">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding>
+            <marker date="1434076937000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1434076937000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1434076937000" expanded="true" signature="-1:-1" placeholder=" Display a listing of the resource. ..." />
+            <marker date="1434076937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434076937000" expanded="true" signature="-1:-1" placeholder=" Get the view for the mail function. ..." />
+            <marker date="1434076937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+            <marker date="1434076937000" expanded="true" signature="-1:-1" placeholder=" Send a mail. ..." />
+            <marker date="1434076937000" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2136076" vertical-offset="0" max-vertical-offset="632">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1427231216000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1427231216000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/laravel/app/Http/Controllers/Auth/PasswordController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47468355" vertical-offset="0" max-vertical-offset="632">
+          <caret line="21" column="49" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
           <folding />
         </state>
       </provider>

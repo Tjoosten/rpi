@@ -26,7 +26,7 @@ class VariousController extends Controller {
      */
     public function mailView()
     {
-        $data['title'] = '';
+        $data['title'] = Lang::get('');
         return view('', $data);
     }
 

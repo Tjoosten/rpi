@@ -210,6 +210,12 @@ class AuthController extends Controller {
         return redirect::back()->with($notification);
     }
 
+    /**
+     * Make a user back a simple user.
+     *
+     * @param $id
+     * @return mixed
+     */
     public function undoAdmin($id)
     {
         $MySQL       = User::find($id);
@@ -228,9 +234,19 @@ class AuthController extends Controller {
         return Redirect::back()->with($notification);
     }
 
+    /**
+     * Log the user out of the system.
+     *
+     * @return mixed
+     */
     public function Logout()
     {
         Auth::logout();
-        return Redirect::back();
+
+        $notification['class']   = 'alert alert-success';
+        $notification['heading'] = Lang::get('alerts.success');
+        $notification['message'] = Lang::get('');
+
+        return Redirect::back()->with($notification);
     }
 }
