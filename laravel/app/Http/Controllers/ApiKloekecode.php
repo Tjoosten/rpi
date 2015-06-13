@@ -84,7 +84,14 @@ class ApiKloekecode extends Controller
      */
     public function show($id)
     {
-        //
+        $kloekecode = Kloekecode::where('id', '=', $id)->get();
+        
+        if (count($kloekecode) > 0) {
+            
+        } else {
+            $response['data']      = '';
+            $response['http_code'] = '';
+        }
     }
 
     /**
