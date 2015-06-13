@@ -60,10 +60,14 @@ class ApiKloekecode extends Controller
      *
      * @return Response
      */
-    public function store()
+    public function store(KloekecodeValidation $input)
     {
         $Kloekecode = new Kloekecode;
-
+        $Kloekecode->Kloekecode = $input->Kloekecode; 
+        $Kloekecode->Plaats     = $input->Plaats;
+        $Kloekecode->Gemeente   = $input->Gemeente; 
+        $Kloekecode->Provincie  = $input->Provincie;
+        
         if ($Kloekecode->save()) {
             $response['content'] = $this->kloekecode->KloekecodeTransformer();
             $response['port']    = 200; // HTTP: OK.
@@ -87,11 +91,15 @@ class ApiKloekecode extends Controller
         $kloekecode = Kloekecode::where('id', '=', $id)->get();
         
         if (count($kloekecode) > 0) {
-            
+            $response['data']      = '',
+            $response['http_code'] = 200; // HTTP: OK.
         } else {
             $response['data']      = '';
-            $response['http_code'] = '';
+            $response['http_code'] = 200; // HTTP: OK.
         }
+        
+        return response($response['data'], $response['http_code'])
+                ->header('Content-Type', 'application/json'); 
     }
 
     /**
@@ -100,7 +108,7 @@ class ApiKloekecode extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update($id)
+    public function update(KloekecodeValidation $input, $id)
     {
         $Kloekecode = Kloekecode::find($id);
         $Kloekecode->Kloekecode = $input->kloekecode;
