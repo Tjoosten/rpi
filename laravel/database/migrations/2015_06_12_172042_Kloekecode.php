@@ -14,10 +14,12 @@ class Kloekecode extends Migration
     {
         Schema::create('Kloekecode', function(Blueprint $t)
         {
+            $t->increments('id');
             $t->string('Kloekecode')->nullable();
             $t->string('Plaats')->nullable();
             $t->string('Gemeente')->nullable();
             $t->string('Provincie')->nullable();
+            $t->timestamps();
         });
     }
 

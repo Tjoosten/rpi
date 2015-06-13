@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="nl">
+    <head>
+        <?php /* Header component */ ?>
+        <?php echo $__env->make('components.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </head>
+    <body>
+        <?php /* Navbar component */ ?>
+        <?php echo $__env->make('components.navbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="jumbotron">
+                        <h1>Dialect database.</h1>
+                        <p>
+                            Een onderzoeks platform voor nederlandstalige dialecten.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <?php /* JavaScript component */ ?>
+        <?php echo $__env->make('components.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </body>
+</html>
