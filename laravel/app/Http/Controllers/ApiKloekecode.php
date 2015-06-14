@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\KloekecodeValidation;
 use App\Kloekecode;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -58,6 +59,7 @@ class ApiKloekecode extends Controller
     /**
      * Store a newly created resource in storage.
      *
+     * @param KloekecodeValidation $input
      * @return Response
      */
     public function store(KloekecodeValidation $input)
@@ -89,12 +91,15 @@ class ApiKloekecode extends Controller
     public function show($id)
     {
         $kloekecode = Kloekecode::where('id', '=', $id)->get();
-        
+
+        $resource   = new Collection($kloekecode, $this->kloekecode->KloekecodeTransformer());
+        $output     = $this->fractal->createData($resource)->toJson();
+
         if (count($kloekecode) > 0) {
-            $response['data']      = '',
+            $response['data']      = $output;
             $response['http_code'] = 200; // HTTP: OK.
         } else {
-            $response['data']      = '';
+            $response['data']      = $this->kloekecode->EmptyTransformer();
             $response['http_code'] = 200; // HTTP: OK.
         }
         
@@ -105,7 +110,8 @@ class ApiKloekecode extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  int  $id
+     * @param KloekecodeValidation $input
+     * @param  int $id
      * @return Response
      */
     public function update(KloekecodeValidation $input, $id)
@@ -117,10 +123,10 @@ class ApiKloekecode extends Controller
         $Kloekecode->Provincie  = $input->provincie;
 
         if ($Kloekecode->save()) {
-            $response['body']      = $this->kloekecode->KloekecodeTransformer();
+            $response['body']      = $this->kloekecode->InsertSuccess();
             $response['http_code'] = 200; // HTTP: OK.
         } else {
-            $response['body']      = $this->kloekecode->EmptyTransformer();
+            $response['body']      = $this->kloekecode->InsertFailure();
             $response['http_code'] = 200; // HTTP: OK.
         }
 
@@ -139,10 +145,10 @@ class ApiKloekecode extends Controller
         $count = Kloekecode::destroy($id);
 
         if ($count > 0) {
-            $response['body']      = '';
+            $response['body']      = $this->kloekecode->destroySuccess();
             $response['http_code'] = 200; // HTTP: OK.
         } else {
-            $response['body']      = '';
+            $response['body']      = $this->kloekecode->destroyFailure();
             $response['http_code'] = 400; // HTTP: Bad Request
         }
 

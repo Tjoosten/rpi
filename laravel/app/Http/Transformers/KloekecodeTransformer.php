@@ -20,4 +20,24 @@ class KloekecodeTransformer {
         return [['message' => 'could no kloekecode found']];
     }
 
+    public function InsertFailure()
+    {
+        return[['message' => 'Could not insert the data']];
+    }
+
+    public function InsertSuccess()
+    {
+        return [['message' => 'Data is inserted successfully.']];
+    }
+
+    public function destroySuccess()
+    {
+        return [['message' => 'Data successfully destroyed']];
+    }
+
+    public function destroyFailure()
+    {
+        return [['message' => 'Could not destroy the data']];
+    }
+
 }

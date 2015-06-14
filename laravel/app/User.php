@@ -5,6 +5,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Laravel\Cashier\Billable;
+use Laravel\Cashier\Contracts\Billable as BillableContract;
 
 /**
  * @property string password
@@ -12,9 +14,13 @@ use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
  * @property mixed lastname
  * @property mixed firstname
  */
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract {
+class User extends Model implements
+    AuthenticatableContract,
+    CanResetPasswordContract,
+    BillableContract
+{
 
-	use Authenticatable, CanResetPassword;
+	use Authenticatable, CanResetPassword, Billable;
 
 	/**
 	 * The database table used by the model.

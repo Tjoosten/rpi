@@ -135,7 +135,7 @@ class AuthController extends Controller {
             $notification['heading'] = Lang::get('alerts.success');
             $notification['message'] = Lang::get('auth.blockSuccess');
         } else {
-            $notifucation['class']   = 'alert alert-danger';
+            $notification['class']   = 'alert alert-danger';
             $notification['heading'] = Lang::get('alerts.danger');
             $notification['message'] = Lang::get('auth.blockError');
         }
