@@ -11,7 +11,12 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="">Woorden</a></li>
+                <li><a href="/words">Woorden</a></li>
+
+                <?php if(Auth::check()): ?>
+                    <li><a href="/insertWord">Woord toevoegen</a></li>
+                <?php endif; ?>
+
                 <li><a href="">Contact</a></li>
             </ul>
 

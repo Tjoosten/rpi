@@ -15,11 +15,23 @@
 Route::get('/', 'VariousController@index');
 Route::get('/register', 'AuthController@ViewRegister');
 Route::get('/management', 'AuthController@getUsers');
+route::post('/login', 'AuthController@verifyLogin');
 Route::get('/logout', 'AuthController@Logout');
 Route::post('/register', 'AuthController@postRegister');
 Route::get('/block/{id}', 'AuthController@doBlock');
 Route::get('/unblock/{id}', 'AuthController@doUnBlock');
 Route::get('/delete/{id}', 'AuthController@deleteUser');
+
+// Words
+Route::get('/words', 'WordsController@index');
+Route::get('/insertWord', 'WordsController@ViewInsertWord');
+Route::post('/insertWord', 'WordsController@PostInsertWord');
+
+// Donate
+
+// Change password routes
+Route::get('/settings/{id}','AuthController@AccountSettingsView');
+Route::post('/settings', 'AuthController@AccountSettingsUpdate');
 
 // Password reset link request routes...
 Route::get('password/email', 'Auth\PasswordController@getEmail');

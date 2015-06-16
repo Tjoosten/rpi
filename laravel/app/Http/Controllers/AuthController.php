@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
 use App\User;
+use App\Statistics;
 use App\Http\Requests;
 use App\Http\Requests\UserValidation;
 
@@ -87,26 +88,30 @@ class AuthController extends Controller {
     {
         // Input variable are in a data variable
         // So we can use them into the email template if needed.
-        $Data['firstname'] = $input->firstname;
-        $Data['lastname']  = $input->lastname;
-        $Data['email']     = $input->email;
-        $Data['password']  = str_random(15);
+        $Variable['firstname'] = $input->firstname;
+        $Variable['lastname']  = $input->lastname;
+        $Variable['email']     = $input->email;
+        $Variable['password']  = str_random(15);
 
-        $MySQL            = new User;
-        $MySQL->firstname = $Data['firstname'];
-        $MySQL->lastname  = $Data['lastname'];
-        $MySQL->email     = $Data['email'];
-        $MySQL->password  = $Data['password'];
+        $userValues = [
+            'firstname' => $Variable['firstname'],
+            'lastname'  => $Variable['lastname'],
+            'email'     => $Variable['email'],
+            'password'  => Hash::make($Variable['password'])
+        ];
 
-        if ($MySQL->save()) {
+        $user  = User::create($userValues);
+        $stats = Statistics::create(['user_id' => $user->id]);
+
+        if ($user && $stats) {
             $notification['class']   = 'alert alert-success';
             $notification['heading'] = Lang::get('alerts.success');
             $notification['message'] = Lang::get('auth.registerSuccess');
 
             // Email Template
-            Mail::send('emails.register', $Data, function($message) use($Data) {
+            Mail::send('emails.register', $Variable, function($message) use($Variable) {
                 $message->from('Topairy@gmail.com', 'Webred')->subject('register');
-                $message->to($Data['email']);
+                $message->to($Variable['email']);
             });
         } else {
             $notification['class']   = 'alert alert-danger';
@@ -177,9 +182,10 @@ class AuthController extends Controller {
      */
     public function deleteUser($id)
     {
-        $count = User::destroy($id);
+        $user       = User::destroy($id);
+        $statistics = Statistics::destroy($id);
 
-        if ($count > 0) {
+        if ($user > 0 && $statistics > 0) {
             $notification['class']   = 'alert alert-success';
             $notification['heading'] = Lang::get('alerts.success');
             $notification['message'] = Lang::get('auth.deleteSuccess');
@@ -249,4 +255,42 @@ class AuthController extends Controller {
 
         return Redirect::back()->with($notification);
     }
+
+    /**
+     * Account settings view
+     *
+     * @return \Illuminate\View\View
+     */
+    public function AccountSettingsView($id)
+    {
+        $Data['title'] = Lang::get('');
+        $Data['query'] = User::where('id', '=', $id)->get();
+        return view('Auth.settings', $Data);
+    }
+
+    /**
+     * Save changes to the database
+     *
+     * @param UserValidation $input
+     * @param $id
+     * @return mixed
+     */
+    public function AccountSettingsUpdate(UserValidation $input, $id)
+    {
+        $user           = User::find($id);
+        $user->email    = $input->email;
+
+        if ($user->save()) {
+            $notification['class']   = '';
+            $notification['heading'] = Lang::get('');
+            $notification['message'] = Lang::get('');
+        } else {
+            $notification['class']   = '';
+            $notification['heading'] = Lang::get('');
+            $notification['message'] = Lang::get('');
+        }
+
+        return Redirect::back()->with($notification);
+    }
+
 }
