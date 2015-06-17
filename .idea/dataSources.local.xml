@@ -4,5 +4,11 @@
     <data-source name="SQLite -" uuid="0d448f83-392b-41a2-8590-7a35ba189db5">
       <secret-storage>master_key</secret-storage>
     </data-source>
+    <data-source name="MySQL - L854@localhost" uuid="4e55f4a8-8047-4775-a23e-d534e325dd50">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>L854.*</schema-pattern>
+      <default-schemas>L854.*</default-schemas>
+    </data-source>
   </component>
 </project>
