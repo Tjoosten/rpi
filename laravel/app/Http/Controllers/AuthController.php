@@ -195,7 +195,7 @@ class AuthController extends Controller {
             $notification['message'] = Lang::get('auth.deleteError');
         }
 
-        return Redirect::back()->with($notifcation);
+        return Redirect::back()->with($notification);
     }
 
     public function doAdmin($id)

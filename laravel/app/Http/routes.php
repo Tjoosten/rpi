@@ -21,6 +21,8 @@ Route::post('/register', 'AuthController@postRegister');
 Route::get('/block/{id}', 'AuthController@doBlock');
 Route::get('/unblock/{id}', 'AuthController@doUnBlock');
 Route::get('/delete/{id}', 'AuthController@deleteUser');
+Route::get('/upgrade/{id}', 'AuthController@doAdmin');
+Route::get('/downgrade/{id}', 'AuthController@undoAdmin');
 
 // Words
 Route::get('/words', 'WordsController@index');
@@ -43,6 +45,11 @@ Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 // API
 Route::get('/kloekecode/all', 'ApiKloekecode@index');
+Route::get('/kloekecode/{id}', 'ApiKloekecode@show');
+Route::put('/kloekecode/{id}', 'ApiKloekecode@show');
+Route::patch('/kloekecode/{id}', 'ApiKloekecode@show');
+Route::delete('/kloekecode/{id}', 'ApiKloekecode@destroy');
+Route::get('/kloekecode/insert', 'ApiKloekecode@store');
 
 Route::post('/user/insert', 'ApiUsers@store');
 Route::get('/user/all', 'ApiUsers@index');

@@ -2,13 +2,32 @@
 
 class ApiUsersTest extends TestCase
 {
-    /**
-     * A basic functional test example.
-     *
-     * @return void
-     */
-    public function testIndexUrl()
+    private $insertArray = [
+        'firstname' => 'foo',
+        'lastname'  => 'bar',
+        'email'     => 'foobar@domain.net'
+    ];
+
+    private $mimeJson = ['Content-Type' => 'application/json'];
+    private $mimeYaml = ['Context-Type' => 'application/yaml'];
+
+    public function testPostUserMethodJson()
     {
-        $this->visit('/');
+        $this->post('/user/insert', $this->insertArray, $this->mimeJson);
+    }
+
+    public function testPostUserMethodYaml()
+    {
+        $this->post('/user/insert', $this->insertArray, $this->mimeYaml);
+    }
+
+    public function testDeleteMethodJson()
+    {
+        $this->delete('/user/1', $this->mimeJson);
+    }
+
+    public function testDeleteMethodYaml()
+    {
+        $this->delete('/user/1', $this->mimeYaml);
     }
 }
