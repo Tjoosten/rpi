@@ -1,0 +1,1 @@
+define({  "name": "example",  "version": "0.1.0",  "description": "apiDoc basic example",  "title": "Custom apiDoc browser title",  "url": "https://api.github.com/v1",  "debug": true,  "sampleUrl": false,  "apidoc": "0.2.0",  "generator": {    "name": "apidoc",    "time": "2015-06-21T00:59:52.461Z",    "url": "http://apidocjs.com",    "version": "0.13.1"  }});
