@@ -23,7 +23,7 @@ class ApiWords extends Controller
     public function __construct()
     {
         $this->fractal = new Manager();
-        $this->wordTransformer = new wordTransformer();
+        $this->wordTransformer = new wordTransformer(); 
     }
 
     /**
@@ -69,6 +69,15 @@ class ApiWords extends Controller
         $words    = Words::where('id', '=', $id)->get();
         $resource = new Collection($user, $this->wordTransformer->TransformerSpecific());
         $output   = $this->fractal->createData($resource);
+        
+        if ($output > 0) {
+            $responseBody   = $output->toJson();  
+        } else {
+            $responseBody   = $this->wordTransformer->EmptyTransformer(); 
+        }
+        
+        $response = response($responseBody, 200)->header('application/json');
+        return $response;
     }
 
     /**
@@ -100,8 +109,18 @@ class ApiWords extends Controller
      * @apiHeader (Content-Type) {json} application/json Header voor een JSON output.
      * @apiParam {integer} id De ID van het woord.
      */
-    public function destroy($id)
+    public function destroy(Request $request, $id)
     {
-        //
+        $destroy = Words::destroy($id); 
+        
+        if ($destroy > 0) {
+            $responseBody = $this->wordTransformer->SuccessDelete();
+        } else {
+            $responseBody = $this->wordTransformer->ErrorDelete(); 
+        } 
+        
+        $response = response($responseBody, 200)->header("application/json"); 
+        return $response;
+        
     }
 }

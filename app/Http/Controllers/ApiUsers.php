@@ -203,6 +203,11 @@ class ApiUsers extends Controller {
                     $responseBody   = $this->userTransformer->UpdateSuccess();
                     $responseHeader = 'application/json';
                     break;
+                case "application/php":
+                    $responseCode   = 200; // HTTP: OK.
+                    $responseBody   = $this->userTransformer->UpdateSuccess(); 
+                    $responseHeader = "application/php";
+                    break; 
                 default:
                     $responseCode   = 400;
                     $responseBody   = '';
@@ -244,15 +249,28 @@ class ApiUsers extends Controller {
                     $responseCode   = 200; // HTTP: OK
                     $responseHeader = "text/yaml";
                     break;
+                case "application/php":
+                    $responseBody   = serialize($this->userTransformer->DeleteSuccess());
+                    $responseCode   = $request->getStatusCode(); // HTTP: OK
+                    $responseHeader = 'application/php';
+                    break;
                 default:
                     $responseBody   = $this->invalidTransformer->invalidHttpHead();
                     $responseCode   = 400; // HTTP: Bad request
                     $responseHeader = "application/json";
             }
         } else {
-            $responseBody   = $this->userTransformer->DeleteError();
-            $responseCode   = 200;
-            $responseHeader = "application/json";
+            switch($request->headers->get('Content-Type')) {
+                case "application/php": 
+                    $responseBody   = serialize($this->userTransformer->DeleteError());
+                    $responseCode   = 200;
+                    $responseHeader = "application/json";
+                    break; 
+                default:
+                    $responseBody   = $this->invalidTransformer->invalidHttpHead();
+                    $responseCode   = 400; // HTTP: Bad request
+                    $responseHeader = "application/json";
+            }
         }
 
         $response = new response($responseBody, $responseCode);
