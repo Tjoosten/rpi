@@ -4,11 +4,28 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use League\Fractal\Manager;
+use League\Fractal\Resource\Collection;
+use League\Fractal\Pagination\Cursor;
+
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Http\Transformers\wordTransformer;
 
 class ApiWords extends Controller
 {
+    private $fractal;
+    private $wordTransformer;
+
+    /**
+     * Class Constructor
+     */
+    public function __construct()
+    {
+        $this->fractal = new Manager();
+        $this->wordTransformer = new wordTransformer();
+    }
+
     /**
      * @api {get} /api/words/all Alle woorden.
      * @apiName GetWords
@@ -16,7 +33,7 @@ class ApiWords extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -49,7 +66,9 @@ class ApiWords extends Controller
      */
     public function show($id)
     {
-        //
+        $words    = Words::where('id', '=', $id)->get();
+        $resource = new Collection($user, $this->wordTransformer->TransformerSpecific());
+        $output   = $this->fractal->createData($resource);
     }
 
     /**

@@ -10,6 +10,7 @@ use App\Http\Transformers\KloekecodeTransformer;
 
 use Illuminate\Support\Facades\Input;
 
+use Illuminate\Support\Facades\Request;
 use League\Fractal\Manager;
 use League\Fractal\Resource\Collection;
 use League\Fractal\Pagination\Cursor;
@@ -108,7 +109,7 @@ class ApiKloekecode extends Controller
         }
 
         return response($response['content'], $response['port'])
-                ->header('Content-Type', 'application/josn');
+                ->header('Content-Type', 'application/json');
     }
 
     /**
@@ -168,10 +169,7 @@ class ApiKloekecode extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return Response
      */
     public function destroy($id)
     {

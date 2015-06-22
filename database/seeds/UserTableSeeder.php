@@ -1,6 +1,7 @@
 <?php
 
 use App\User;
+use App\Statistics;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,12 +17,15 @@ class UserTableSeeder extends Seeder {
         Model::unguard();
         DB::table('users')->truncate();
 
-        $user1 = new User;
-        $user1->firstname = 'Tim';
-        $user1->lastname  = 'Joosten';
-        $user1->email     = 'Topairy@gmail.com';
-        $user1->password  = Hash::make('root');
-        $user1->save();
+        $userValues = [
+            'firstname' => 'tim',
+            'lastname'  => 'joosten',
+            'email'     => 'Topairy@gmail.com',
+            'password'  => Hash::make('root')
+        ];
+
+        $user  = User::create($userValues);
+        Statistics::create(['user_id' => $user->id]);
 
         $user2 = new User;
         $user2->firstname = 'Tidm';

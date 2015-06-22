@@ -48,14 +48,16 @@ Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
 Route::post('password/reset', 'Auth\PasswordController@postReset');
 
 // API
-Route::get('/kloekecode/all', 'ApiKloekecode@index');
-Route::get('/kloekecode/{id}', 'ApiKloekecode@show');
-Route::put('/kloekecode/{id}', 'ApiKloekecode@show');
-Route::patch('/kloekecode/{id}', 'ApiKloekecode@show');
-Route::delete('/kloekecode/{id}', 'ApiKloekecode@destroy');
-Route::get('/kloekecode/insert', 'ApiKloekecode@store');
+Route::group(['prefix' => 'api'], function() {
+    Route::get('/kloekecode/all', 'ApiKloekecode@index');
+    Route::get('/kloekecode/{id}', 'ApiKloekecode@show');
+    Route::put('/kloekecode/{id}', 'ApiKloekecode@show');
+    Route::patch('/kloekecode/{id}', 'ApiKloekecode@show');
+    Route::delete('/kloekecode/{id}', 'ApiKloekecode@destroy');
+    Route::get('/kloekecode/insert', 'ApiKloekecode@store');
 
-Route::post('/user/insert', 'ApiUsers@store');
-Route::get('/user/all', 'ApiUsers@index');
-Route::get('/user/{id}', 'ApiUSers@show');
-Route::delete('/user/{id}', 'ApiUsers@destroy');
+    Route::post('/user/insert', 'ApiUsers@store');
+    Route::get('/user/all', 'ApiUsers@index');
+    Route::get('/user/{id}', 'ApiUSers@show');
+    Route::delete('/user/{id}', 'ApiUsers@destroy');
+});

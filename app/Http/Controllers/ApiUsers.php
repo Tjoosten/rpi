@@ -1,7 +1,6 @@
 <?php namespace App\Http\Controllers;
 
 use App\User;
-use App\Http\Requests;
 use App\Http\Requests\UserValidation;
 
 use Symfony\Component\Yaml\Dumper;
@@ -87,10 +86,10 @@ class ApiUsers extends Controller {
 	}
 
     /**
-     * Store a newly created resource in storage.
-     *
-     * @param Request $request
-     * @return Response
+     * @api {post} /api/user/insert gebruiker toevoegen.
+     * @apiName InsertUser
+     * @apiGroup Gebruikers
+     * @apiVersion 1.0.0
      */
 	public function store(Request $request)
 	{

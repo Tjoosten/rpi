@@ -42,7 +42,6 @@
 
                         <label for="03"> Beschrijving: </label>
                         <textarea name="description" placeholder="Beschrijving"></textarea>
-
                         <br/>
 
                         <button type="submit" class="btn btn-success">Invoegen</button>

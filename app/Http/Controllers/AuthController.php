@@ -36,7 +36,7 @@ class AuthController extends Controller {
     public function getUsers()
     {
         $data['title'] = Lang::get('auth.titleUsers');
-        $data['query'] = user::paginate(15);
+        $data['query'] = User::paginate(15);
 
         return view('admin.users', $data);
     }

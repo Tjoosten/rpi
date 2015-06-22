@@ -4,7 +4,7 @@ class ApiKloekecodeTest extends TestCase
 {
     public function testGetAll()
     {
-        $response = $this->call('GET', '/kloekecode/all');
+        $response = $this->call('GET', '/api/kloekecode/all');
         $this->seeJson();
 
         $array = json_decode($response->getContent(), true);
@@ -26,7 +26,7 @@ class ApiKloekecodeTest extends TestCase
 
     public function testGetSpecific()
     {
-        $response = $this->call('GET', '/kloekecode/1');
+        $response = $this->call('GET', '/api/kloekecode/1');
         $this->seeJson();
 
         $array = json_decode($response->getContent(), true);
@@ -49,12 +49,12 @@ class ApiKloekecodeTest extends TestCase
             'Provincie'  => 'baz'
         ];
 
-        $this->post('/kloekecode/insert', $insertArray);
+        $this->post('/api/kloekecode/insert', $insertArray);
     }
 
     public function testDeleteKloekecode()
     {
-        $this->delete('/kloekecode/1');
+        $this->delete('/api/kloekecode/1');
         $this->assertResponseOk();
     }
 
@@ -67,7 +67,7 @@ class ApiKloekecodeTest extends TestCase
             'Provincie'  => 'baz'
         ];
 
-        $this->patch('/kloekecode/1', $insertArray);
+        $this->patch('/api/kloekecode/1', $insertArray);
     }
 
     public function testPutKloekecode()
@@ -79,7 +79,7 @@ class ApiKloekecodeTest extends TestCase
             'Provincie'  => 'baz'
         ];
 
-        $this->put('/kloekecode/1', $insertArray);
+        $this->put('/api/kloekecode/1', $insertArray);
     }
 
 }

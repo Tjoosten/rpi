@@ -11,16 +11,34 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/words">Woorden</a></li>
+                <li class="dropdown"">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        Woorden
+                    </a>
 
-                @if(Auth::check())
-                    <li><a href="/insertWord">Woord toevoegen</a></li>
-                @endif
+                    <ul class="dropdown-menu">
+                        <li><a href="/words">Woorden</a></li>
+                        <li><a href="/insertWord">Woord toevoegen</a></li>
+                    </ul>
+                </li>
 
-                <li><a href="">Contact</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
 
-            @if(! Auth::check())
+            @if(Auth::check())
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown"">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            {!! Auth::user()->firstname !!} {!! Auth::user()->lastname !!}
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li> <a href="/logout"> @lang('auth.logout') </a> </li>
+                        </ul>
+                    </li>
+                </ul>
+            @else
                 <form method="POST" action="/login" class="navbar-form navbar-right">
                     <div class="form-group">
                         <input type="text" name="email" placeholder="email" class="form-control">
@@ -31,18 +49,6 @@
                     <button type="submit" class="btn btn-success">Login</button>
                     <a class="btn btn-danger" href="">Reset Password</a>
                 </form>
-            @else
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            {!! Auth::user()->firstname !!} {!! Auth::user()->lastname !!}
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            <li> <a href="/logout"> @lang('auth.logout') </a> </li>
-                        </ul>
-                    </li>
-                </ul>
             @endif
         </div><!--/.nav-collapse -->
     </div>
